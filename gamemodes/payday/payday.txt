@@ -1,0 +1,29 @@
+"PAYDAY 2 Alpha"
+{
+	"title"		"PAYDAY 2 Alpha"
+	"base"		"base"
+	"version"    "0.8.8"
+	"maps"		"^pd2_"
+	"menusystem"    "1"
+	"category"	"pve"
+"settings"{
+			1
+            {
+            "name"        "policejoin"
+            "text"        "Disable join to police?"
+            "help"        "disabling join"
+            "type"        "CheckBox"
+            "default"    "0"
+            "singleplayer" "1"
+			}
+			2
+            {
+            "name"        "bleedout_enable"
+            "text"        "Enable revive system for gang?"
+            "help"        "enabling system"
+            "type"        "CheckBox"
+            "default"    "1"
+            "singleplayer" "1"
+			}
+	}
+}
