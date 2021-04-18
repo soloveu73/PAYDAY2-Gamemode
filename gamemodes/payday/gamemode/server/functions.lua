@@ -96,11 +96,9 @@ function startending()
 	end
 end
 
-hook.Add( "ShouldCollide", "CustomCollisionsWithCops", function( ent1, ent2 )
-    if ent2:IsPlayer() then
-    	if ent1:IsNextBot() and ent2:Team() == 2 then return false end
-    end
-end)
+hook.Add( "ShouldCollide", "CustomCollisionsPD2", function( ent1, ent2 )
+    if ent1:IsPlayer() and ent1:GetPos():Distance(ent2:GetPos())<29 and ent2:IsNextBot() then return false end
+end )
 
 hook.Add( "EntityTakeDamage", "NextbotDamageBlockIfTeam", function( target, dmginfo )
 	local attacker = dmginfo:GetAttacker()
